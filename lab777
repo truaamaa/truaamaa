@@ -1,0 +1,32 @@
+class Furniture:
+    def init(self, name):
+        self.name = name
+
+class Sofa(Furniture):
+    def init(self, name):
+        super().init(name)
+
+class Wardrobe(Furniture):
+    def init(self, name):
+        super().init(name)
+
+class Room:
+    def init(self):
+        self.furniture = 
+
+    def addfurniture(self, item):
+        self.furniture.append(item)
+
+    def countsofas(self):
+        count = 0
+        for item in self.furniture:
+            if isinstance(item, Sofa):
+                count += 1
+        return count
+
+    def countwardrobes(self):
+        count = 0
+        for item in self.furniture:
+            if isinstance(item, Wardrobe):
+                count += 1
+        return count
